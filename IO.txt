@@ -1,0 +1,48 @@
+Inputs -> Image Range [0,5)
+
+Cases - 1:
+
+College template: 
+
+text_driven 
+
+
+CTA, comp, infographics
+carousel --> Input same, output -> User specified count (bottleneck)
+
+static post -> Input same, output ->1
+
+
+
+Case: 2
+
+image masking, editing
+
+Congratulatory posts, inner alumnis, faculties, 
+
+image masking - > Image Range [0,5)
+
+base_image -> way to identify base image
+
+
+
+Deliverables: 
+
+1. Image generation pipeline -> basecode
+-> streamlit app
+
+2. Linkedin scraping (url, or url list)
+-> backend code -> dynamic list, can be changed based on time, use sftp methods
+
+Models: 
+
+Openai -> primary model
+Stablediffusion -> Secondary model
+
+
+
+
+
+
+
+
