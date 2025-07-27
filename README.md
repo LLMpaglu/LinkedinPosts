@@ -1,6 +1,6 @@
 # AI Image Generation Suite
 
-A comprehensive Python application suite for AI-powered image generation and editing. Features both DALL-E image editing and GPT-4 Vision image generation capabilities.
+A comprehensive Python application suite for AI-powered image generation and editing. Features DALL-E image editing, GPT-4 Vision image generation, and advanced image masking capabilities.
 
 *Made by Anant with ❤️*
 
@@ -22,6 +22,14 @@ A comprehensive Python application suite for AI-powered image generation and edi
 - ✅ **Real-time Preview**: See uploaded images before generation
 - ✅ **Direct Download**: Download generated images directly from the web interface
 
+### 🎭 **AI Image Masking** (`image_masking_streamlit.py`)
+- ✅ **Precise Masking**: Generate new content in specific masked areas
+- ✅ **Dual Image Upload**: Upload base image and mask image separately
+- ✅ **Quality Control**: Choose between standard and high quality output
+- ✅ **Mask Guidelines**: Clear instructions for creating effective masks
+- ✅ **Custom Output**: Specify custom output filenames
+- ✅ **Visual Feedback**: Preview both base and mask images before processing
+
 ## Requirements
 
 - Python 3.7+
@@ -42,7 +50,7 @@ A comprehensive Python application suite for AI-powered image generation and edi
 
 ## Usage
 
-### 🌐 **GPT-4 Vision Image Generator (Recommended)**
+### 🌐 **GPT-4 Vision Image Generator**
 
 Launch the modern web interface:
 ```bash
@@ -59,6 +67,24 @@ streamlit run streamlit_app.py
 - Real-time image preview and validation
 - Direct download of generated images
 - Modern, responsive web interface
+
+### 🎭 **AI Image Masking**
+
+Launch the image masking interface:
+```bash
+# Easy launcher
+python mask_runner.py
+
+# Or direct Streamlit
+streamlit run image_masking_streamlit.py
+```
+
+**Features:**
+- Upload base image and mask image separately
+- Generate new content in masked areas only
+- Choose between standard and high quality output
+- Custom output filename specification
+- Clear mask guidelines and instructions
 
 ### 💻 **DALL-E Image Editor (Command Line)**
 
@@ -98,6 +124,16 @@ Enter your API key directly in the web interface or when prompted by the CLI.
 3. **Generate**: Click "Generate Image" and wait for results
 4. **Download**: Save your generated images
 
+### AI Image Masking
+1. **Upload Base Image**: Upload the image you want to edit
+2. **Upload Mask Image**: Upload a mask (white = generate new content, black = keep original)
+3. **Write Prompt**: Describe what to generate in the masked area
+   ```
+   "A beautiful sunset sky with orange and pink clouds"
+   ```
+4. **Generate**: Click "Generate Masked Image" and wait for results
+5. **Download**: Save your masked image with custom filename
+
 ### DALL-E Editor
 ```
 === OpenAI Image Editing Tool ===
@@ -117,14 +153,17 @@ Your edited image has been saved as: generated_image.png
 ## File Structure
 
 ```
-├── streamlit_app.py          # GPT-4 Vision web application
-├── OpenAI.py                 # DALL-E command-line editor
-├── Image_gen_scratch.py      # Original GPT-4 Vision code
-├── run_image_generator.py    # Launcher for web app
-├── requirements.txt          # Python dependencies
-├── README.md                 # This documentation
+├── streamlit_app.py              # GPT-4 Vision web application
+├── image_masking_streamlit.py    # AI Image Masking web application
+├── OpenAI.py                     # DALL-E command-line editor
+├── Image_gen_scratch.py          # Original GPT-4 Vision code
+├── image_mask.py                 # Original image masking code
+├── run_image_generator.py        # Launcher for GPT-4 Vision app
+├── mask_runner.py                # Launcher for image masking app
+├── requirements.txt              # Python dependencies
+├── README.md                     # This documentation
 └── .streamlit/
-    └── config.toml          # Streamlit configuration
+    └── config.toml              # Streamlit configuration
 ```
 
 ## Error Handling
@@ -143,6 +182,12 @@ Both applications include comprehensive error handling:
 ### GPT-4 Vision Generator
 - Generated images displayed directly in browser
 - Download buttons for each generated image
+- Real-time progress indicators and status messages
+
+### AI Image Masking
+- Generated masked images displayed directly in browser
+- Download buttons with custom filenames
+- Images also saved locally with specified filename
 - Real-time progress indicators and status messages
 
 ### DALL-E Editor
