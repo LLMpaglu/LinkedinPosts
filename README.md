@@ -2,6 +2,8 @@
 
 A comprehensive Python application suite for AI-powered image generation and editing. Features both DALL-E image editing and GPT-4 Vision image generation capabilities.
 
+*Made by Anant with ❤️*
+
 ## 🚀 Features
 
 ### 🎨 **DALL-E Image Editor** (`OpenAI.py`)
@@ -168,4 +170,8 @@ Both applications include comprehensive error handling:
 - GPT-4 Vision generator supports multiple image formats and larger file sizes
 - DALL-E editor is optimized for PNG images under 4MB
 - Both applications use the latest OpenAI API versions
-- For more information, see the [OpenAI API documentation](https://platform.openai.com/docs/) 
+- For more information, see the [OpenAI API documentation](https://platform.openai.com/docs/)
+
+---
+
+*Made by Anant with ❤️* 
